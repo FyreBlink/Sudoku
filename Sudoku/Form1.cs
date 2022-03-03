@@ -36,6 +36,7 @@ namespace Sudoku
 
             button1.Location = new(385, 515);
 
+            RestartMenu1Item.Enabled = false;
             DebugMenu1Item.Visible = false;
 
             StartGameMenu1Item.Click += StartGame_Click;
@@ -60,6 +61,7 @@ namespace Sudoku
         {
             if (Difficulty == 0) Difficulty = 10;
             GeneratingGrid();
+            RestartMenu1Item.Enabled = true;
         }
 
         private void RestartGame_Click(object sender, EventArgs e)
